@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9.00"
+	Version="8,00"
 	Name="libprotobuf"
 	ProjectGUID="{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}"
+	RootNamespace="libprotobuf"
 	Keyword="Win32Proj"
-	TargetFrameworkVersion="0"
 	>
 	<Platforms>
 		<Platform
@@ -44,7 +44,7 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBPROTOBUF_EXPORTS;"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
@@ -104,7 +104,7 @@
 				AdditionalOptions="/wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305"
 				AdditionalIncludeDirectories="../src;."
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBPROTOBUF_EXPORTS;"
-				RuntimeLibrary="2"
+				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
@@ -147,6 +147,14 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath="..\src\google\protobuf\stubs\atomicops.h"
+				>
+			</File>
+			<File
+				RelativePath="..\src\google\protobuf\stubs\atomicops_internals_x86_msvc.h"
+				>
+			</File>
 			<File
 				RelativePath="..\src\google\protobuf\io\coded_stream.h"
 				>
@@ -196,10 +204,6 @@
 				>
 			</File>
 			<File
-			        RelativePath="..\src\google\protobuf\io\strtod.h"
-				>
-			</File>
-			<File
 				RelativePath="..\src\google\protobuf\stubs\hash.h"
 				>
 			</File>
@@ -220,23 +224,15 @@
 				>
 			</File>
 			<File
-				RelativePath="..\src\google\protobuf\stubs\atomicops.h"
-			>
-			</File>
-			<File
-				RelativePath="..\src\google\protobuf\stubs\atomicops_internals_x86_msvc.h"
-			>
-			</File>
-			<File
-				RelativePath="..\src\google\protobuf\stubs\platform_macros.h"
-			>
-			</File>
-			<File
 				RelativePath="..\src\google\protobuf\stubs\once.h"
 				>
 			</File>
 			<File
 				RelativePath="..\src\google\protobuf\compiler\parser.h"
+				>
+			</File>
+			<File
+				RelativePath="..\src\google\protobuf\stubs\platform_macros.h"
 				>
 			</File>
 			<File
@@ -264,11 +260,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\src\google\protobuf\stubs\template_util.h"
-				>
-			</File>
-			<File
-				RelativePath="..\src\google\protobuf\stubs\type_traits.h"
+				RelativePath="..\src\google\protobuf\io\strtod.h"
 				>
 			</File>
 			<File
@@ -280,11 +272,19 @@
 				>
 			</File>
 			<File
+				RelativePath="..\src\google\protobuf\stubs\template_util.h"
+				>
+			</File>
+			<File
 				RelativePath="..\src\google\protobuf\text_format.h"
 				>
 			</File>
 			<File
 				RelativePath="..\src\google\protobuf\io\tokenizer.h"
+				>
+			</File>
+			<File
+				RelativePath="..\src\google\protobuf\stubs\type_traits.h"
 				>
 			</File>
 			<File
@@ -327,6 +327,10 @@
 			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
+			<File
+				RelativePath="..\src\google\protobuf\stubs\atomicops_internals_x86_msvc.cc"
+				>
+			</File>
 			<File
 				RelativePath="..\src\google\protobuf\io\coded_stream.cc"
 				>
@@ -372,10 +376,6 @@
 				>
 			</File>
 			<File
-			        RelativePath="..\src\google\protobuf\io\strtod.cc"
-				>
-			</File>
-			<File
 				RelativePath="..\src\google\protobuf\compiler\importer.cc"
 				>
 			</File>
@@ -389,10 +389,6 @@
 			</File>
 			<File
 				RelativePath="..\src\google\protobuf\stubs\once.cc"
-				>
-			</File>
-			<File
-				RelativePath="..\src\google\protobuf\stubs\atomicops_internals_x86_msvc.cc"
 				>
 			</File>
 			<File
@@ -413,6 +409,14 @@
 			</File>
 			<File
 				RelativePath="..\src\google\protobuf\service.cc"
+				>
+			</File>
+			<File
+				RelativePath="..\src\google\protobuf\stubs\stringprintf.cc"
+				>
+			</File>
+			<File
+				RelativePath="..\src\google\protobuf\io\strtod.cc"
 				>
 			</File>
 			<File
@@ -457,10 +461,6 @@
 			</File>
 			<File
 				RelativePath="..\src\google\protobuf\io\zero_copy_stream_impl_lite.cc"
-				>
-			</File>
-			<File
-				RelativePath="..\src\google\protobuf\stubs\stringprintf.cc"
 				>
 			</File>
 		</Filter>
